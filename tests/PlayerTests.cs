@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.IO;
+
 namespace _01_02_01_Maze.Tests
 {
     [TestClass()]
