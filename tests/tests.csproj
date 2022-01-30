@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>gyak_01_02_01_MazeTests</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -16,5 +17,4 @@
   <ItemGroup>
     <ProjectReference Include="..\01-02-01-Maze\01-02-01-Maze.csproj" />
   </ItemGroup>
-
 </Project>

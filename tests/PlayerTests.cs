@@ -1,14 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using _01_02_01_Maze;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.IO;
 
-namespace _01_02_01_Maze.Tests
+namespace gyak_01_02_01_Maze.Tests
 {
     [TestClass()]
     public class PlayerTests
@@ -104,7 +102,7 @@ namespace _01_02_01_Maze.Tests
                 StringWriter sw = new StringWriter();
                 Console.SetOut(sw);
                 p.ToConsole();
-                p.MoveWest();
+                p.MoveWest();       
                 p.ToConsole();
 
                 string actual = sw.ToString();
@@ -138,6 +136,5 @@ namespace _01_02_01_Maze.Tests
                 Assert.Fail("Player osztály kivételt dob!");
             }
         }
-
     }
 }
