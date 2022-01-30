@@ -9,7 +9,7 @@ using System.IO;
 namespace gyak_01_02_01_Maze.Tests
 {
     [TestClass()]
-    public class PlayerTests
+    public class Tests
     {
         [TestMethod()]
         public void PlayerTest()
