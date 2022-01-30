@@ -9,7 +9,7 @@ using System.IO;
 namespace gyak_01_02_01_Maze.Tests
 {
     [TestClass()]
-    public class Tests
+    public class PlayerTests
     {
         [TestMethod()]
         public void PlayerTest()
@@ -20,38 +20,42 @@ namespace gyak_01_02_01_Maze.Tests
             }
             catch (Exception e)
             {
-                Assert.Fail("Player osztály konstruktora kivételt dob!");
+                Assert.Fail("Player osztály konstruktora kivételt dob!\n"+e.Message);
             }
         }
 
         [TestMethod()]
         public void ToConsoleTest()
         {
+            string expected = "";
+            string actual = "somthing";
             try
             {
                 Player p = new Player("Játékos Jani", 0, 0);
-                string expected = "Játékos Jani:(0;0)\r\n";
+                expected = "Játékos Jani:(0;0)\r\n";
 
                 StringWriter sw = new StringWriter();
                 Console.SetOut(sw);
                 p.ToConsole();
-                string actual = sw.ToString();
-
-                Assert.AreEqual(expected, actual, "A Plyayer->ToConsole függvény nem a megfelelő szöveget írja a képernyőre!");
+                actual = sw.ToString();
+               
             }
             catch (Exception e)
             {
-                Assert.Fail("Player osztály kivételt dob!");
+                Assert.Fail("Player osztály kivételt dob!\n" + e.Message);
             }
+            Assert.AreEqual(expected, actual, "A Plyayer->ToConsole függvény nem a megfelelő szöveget írja a képernyőre!");
         }
 
         [TestMethod()]
         public void MoveSouthTest()
         {
+            string expected = "";
+            string actual = "somthing";
             try
             {
                 Player p = new Player("Játékos Jani", 0, 0);
-                string expected = "Játékos Jani:(0;0)\r\nJátékos Jani:(0;-1)\r\n";
+                expected = "Játékos Jani:(0;0)\r\nJátékos Jani:(0;-1)\r\n";
 
                 StringWriter sw = new StringWriter();
                 Console.SetOut(sw);
@@ -59,22 +63,24 @@ namespace gyak_01_02_01_Maze.Tests
                 p.MoveSouth();
                 p.ToConsole();
 
-                string actual = sw.ToString();
-                Assert.AreEqual(expected, actual, "A Plyayer->MoveSouth függvény nem a megfelelő szöveget írja a képernyőre!");
+                actual = sw.ToString();                
             }
             catch (Exception e)
             {
-                Assert.Fail("Player osztály kivételt dob!");
+                Assert.Fail("Player osztály kivételt dob!\n" + e.Message);
             }
+            Assert.AreEqual(expected, actual, "A Plyayer->MoveSouth függvény nem a megfelelő szöveget írja a képernyőre!");
         }
 
         [TestMethod()]
         public void MoveNorthTest()
         {
+            string expected = "";
+            string actual = "somthing";
             try
             {
                 Player p = new Player("Játékos Jani", 0, 0);
-                string expected = "Játékos Jani:(0;0)\r\nJátékos Jani:(0;1)\r\n";
+                 expected = "Játékos Jani:(0;0)\r\nJátékos Jani:(0;1)\r\n";
 
                 StringWriter sw = new StringWriter();
                 Console.SetOut(sw);
@@ -82,22 +88,24 @@ namespace gyak_01_02_01_Maze.Tests
                 p.MoveNorth();
                 p.ToConsole();
 
-                string actual = sw.ToString();
-                Assert.AreEqual(expected, actual, "A Plyayer->MoveNorth függvény nem a megfelelő szöveget írja a képernyőre!");
+                 actual = sw.ToString();
             }
             catch (Exception e)
             {
-                Assert.Fail("Player osztály kivételt dob!");
+                Assert.Fail("Player osztály kivételt dob!\n" + e.Message);
             }
+            Assert.AreEqual(expected, actual, "A Plyayer->MoveNorth függvény nem a megfelelő szöveget írja a képernyőre!");
         }
 
         [TestMethod()]
         public void MoveWestTest()
         {
+            string expected = "";
+            string actual = "somthing";
             try
             {
                 Player p = new Player("Játékos Jani", 0, 0);
-                string expected = "Játékos Jani:(0;0)\r\nJátékos Jani:(-1;0)\r\n";
+                expected = "Játékos Jani:(0;0)\r\nJátékos Jani:(-1;0)\r\n";
 
                 StringWriter sw = new StringWriter();
                 Console.SetOut(sw);
@@ -105,22 +113,25 @@ namespace gyak_01_02_01_Maze.Tests
                 p.MoveWest();       
                 p.ToConsole();
 
-                string actual = sw.ToString();
-                Assert.AreEqual(expected, actual, "A Plyayer->MoveWest függvény nem a megfelelő szöveget írja a képernyőre!");
+                actual = sw.ToString();
+               
             }
             catch (Exception e)
             {
-                Assert.Fail("Player osztály kivételt dob!");
+                Assert.Fail("Player osztály kivételt dob!\n" + e.Message);
             }
+            Assert.AreEqual(expected, actual, "A Plyayer->MoveWest függvény nem a megfelelő szöveget írja a képernyőre!");
         }
 
         [TestMethod()]
         public void MoveEastTest()
         {
+            string expected = "";
+            string actual = "somthing";
             try
             {
                 Player p = new Player("Játékos Jani", 0, 0);
-                string expected = "Játékos Jani:(0;0)\r\nJátékos Jani:(1;0)\r\n";
+                 expected = "Játékos Jani:(0;0)\r\nJátékos Jani:(1;0)\r\n";
 
                 StringWriter sw = new StringWriter();
                 Console.SetOut(sw);
@@ -128,13 +139,14 @@ namespace gyak_01_02_01_Maze.Tests
                 p.MoveEast();
                 p.ToConsole();
 
-                string actual = sw.ToString();
-                Assert.AreEqual(expected, actual, "A Plyayer->MoveEast függvény nem a megfelelő szöveget írja a képernyőre!");
+                actual = sw.ToString();
+                
             }
             catch (Exception e)
             {
-                Assert.Fail("Player osztály kivételt dob!");
+                Assert.Fail("Player osztály kivételt dob!\n" + e.Message);
             }
+            Assert.AreEqual(expected, actual, "A Plyayer->MoveEast függvény nem a megfelelő szöveget írja a képernyőre!");
         }
     }
 }
