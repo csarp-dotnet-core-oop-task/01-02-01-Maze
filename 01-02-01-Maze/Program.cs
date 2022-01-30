@@ -1,6 +1,5 @@
 ﻿/* 
 Feladat
-Bevezető feladatok 
 LabirintusProjekt (MazeProject)
 Egy játék kifejlesztésében vesz részt. A játék célja a játékosnak a labirintusból való kijutása. 
 Ön a kódfejlesztés során a játékos kezelését, mozgását fogja implementálni. 
